@@ -1,24 +1,65 @@
 body {
     background-color: beige;
-    margin: 0;
-    padding: 0;
 }
 
 .calculator-div {
+
     width: 400px;
     height: 600px;
-    margin: 0 auto;
+    margin: 50px auto 0px auto;
 
-    background-color: burlywood;
+    background-color: beige;
+}
+
+.outputField {
+    width: 340px;
+    height: 60px;
+    margin: auto;
+    background-color: aliceblue;
+    border-radius: 30px 30px 0px 0px;
 }
 
 #displayField {
+    display: flex;
     width: 100%;
     height: 100px;
-    background-color: aqua;
+    background-color: darkslategray;
+    border-radius: 40px 40px 0px 0px;
 }
-#buttonField {
+
+#buttonsField {
     width: 100%;
-    height: 100%;
-    background-color: blueviolet;
+    height: 500px;
+    background-color: slategrey;
+    border-radius: 0px 0px 40px 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 2px;
+    grid-column-gap: 2px;
+}
+
+button {
+    font-size: 25px;
+}
+
+.my-btn {
+    display: block;
+    width: 100px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: lightblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+    .calculator-div {
+        height: 150px;
+        font-size: 18px;
+        padding: 10px;
+    }
 }
