@@ -1,5 +1,6 @@
 body {
     background-color: beige;
+
 }
 
 .calculator-div {
@@ -12,11 +13,20 @@ body {
 }
 
 .outputField {
-    width: 340px;
-    height: 60px;
+    width: 350px;
+    height: 70px;
     margin: auto;
     background-color: aliceblue;
     border-radius: 30px 30px 0px 0px;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 62px;
+    font-family: 'Courier New', Courier, monospace;
+    overflow-y: hidden;
+    overflow-x: auto;
+    padding: 0px;
 }
 
 #displayField {
@@ -33,13 +43,23 @@ body {
     background-color: slategrey;
     border-radius: 0px 0px 40px 40px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 2fr);
     grid-row-gap: 2px;
     grid-column-gap: 2px;
 }
 
 button {
-    font-size: 25px;
+    font-size: 35px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: lightblue;
+}
+
+button:active {
+    background-color: lightgreen;
 }
 
 .my-btn {
