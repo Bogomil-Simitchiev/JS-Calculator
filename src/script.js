@@ -7,9 +7,24 @@ let secondTimeIteration = false;
 buttonElements.forEach(btnElement => {
     btnElement.addEventListener('click', (e) => {
 
+
         if (validOperatorsAndNumbers.includes(e.currentTarget.value)) {
-            let text = e.currentTarget.value;
-            outputElement.textContent += text;
+            if (outputElement.textContent.length > 0 && ((outputElement.textContent[outputElement.textContent.length - 1] == '-') && (e.currentTarget.value == '-'))) {
+                alert('Cannot have `-` two times!');
+            }
+            else if (outputElement.textContent.length > 0 && ((outputElement.textContent[outputElement.textContent.length - 1] == '+') && (e.currentTarget.value == '+'))) {
+                alert('Cannot have `+` two times!');
+            }
+            else if (outputElement.textContent.length > 0 && ((outputElement.textContent[outputElement.textContent.length - 1] == '*') && (e.currentTarget.value == '*'))) {
+                alert('Cannot have `*` two times!');
+            }
+            else if (outputElement.textContent.length > 0 && ((outputElement.textContent[outputElement.textContent.length - 1] == '/') && (e.currentTarget.value == '/'))) {
+                alert('Cannot have `/` two times!');
+            }
+            else {
+                let text = e.currentTarget.value;
+                outputElement.textContent += text;
+            }
         }
         if (e.currentTarget.value == '=') {
             if (outputElement.textContent[0] == '.') {
@@ -33,7 +48,7 @@ buttonElements.forEach(btnElement => {
             alert('Too big operation or number, please enter smaller one!');
             outputElement.textContent = '';
         }
-
+        //create functionality to button CE:
 
     })
 })
