@@ -29,6 +29,14 @@ body {
     padding: 0px;
 }
 
+.equal-sign {
+    background-color: orange;
+}
+
+.all-clear {
+    border-radius: 0px 0px 0px 40px;
+}
+
 #displayField {
     display: flex;
     width: 100%;
@@ -44,14 +52,15 @@ body {
     border-radius: 0px 0px 40px 40px;
     display: grid;
     grid-template-columns: repeat(4, 2fr);
-    grid-row-gap: 2px;
-    grid-column-gap: 2px;
+    grid-row-gap: 3px;
+    grid-column-gap: 4px;
 }
 
 button {
     font-size: 35px;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
+    border: 0;
 }
 
 button:hover {
